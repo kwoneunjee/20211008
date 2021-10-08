@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+div { display: none;}
+/* 뷰포트 1280px이상 */
+@media screen and (min-width: 1280px) {
+    body {background-color: tan;}
+    .desktop {display: block;}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    body {background-color: thistle;}
+    .tablet_01 {display: block;}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {background-color: yellowgreen;}
+    .tablet_02 {display: block;}
+
+}@media screen and (max-width: 767px) {
+    body {background-color: slateblue;}
+    .mobile {display: block;}
+}

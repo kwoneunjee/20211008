@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0;}
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+        li {list-style: none;}
+        body {
+            background-color: #eee;
+            padding: 100px 0;
+        }
+        .wrap {
+            width: 1400px;
+            margin: 0 auto;
+        }
+        .wrap .top {
+            border-bottom: 1px solid #333;
+            padding-bottom: 120px;
+            margin-bottom: 100px;
+            /* 중간선 만들기 border-bottom
+            padding, margin 으로 선 위,아래 띄워주기 */
+        }
+        /* .top {
+            width: 1400px;
+            margin: 100px auto;
+        } 큰폴더 .wrap 만들어서 거기서 width, margin 설정해주기 */
+        .top h1 {
+            text-align: center;
+            font-size: 40px;
+        }
+        .top h2 {
+            text-align: center;
+            font-size: 40px;
+            color: #555;
+        }
+        .top dl {
+            text-align: center;
+        }
+        .top dl dt {
+            text-align: center;
+            font-size: 80px;
+            margin-top: 50px;
+            position: relative;
+            display: inline-block; 
+            /* inline-block 적용하면 dt::before 에서 width: 100% 했을대 글자 영역만큼 적용, 글자가 중간으로 안가게됨, dl에 text-align: center 추가*/
+        }
+        /********************* 내가한거
+        .top dl dt::before {
+            content: '';
+            height: 20px;
+            width: 400px;
+            display: block;
+            background-color: plum;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        } */
+        .wrap .top dl dt::before {
+            content: '';
+            width: 100%;
+            height: 20px;
+            background-color: plum;
+            display: block;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 20px;
+            z-index: -1; /* position이 있어야 적용 가능 */
+        }
+        .top dl dd:first-of-type {
+            line-height: 1.8;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: left;
+        }
+        .btn {
+            width: 0;
+            transition: linear .5s;
+            /* 아하!여기에 하는거구낭 */
+        }
+        .btn a {
+            height: 50px;
+            width: 200px;
+            border: 1px solid #333;
+            line-height: 50px;
+            /* text-align: center; */
+            margin-top: 30px;
+            display: block;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            width: 200px;
+            background-color: #333;
+            /* transition: linear .5s; 여기ㄴㄴ사라질때 효과안됨*/
+        }
+        .btn:hover a {
+            color: #fff;
+        }
+        /* .cont {
+            width: 1400px;
+            margin: 0 auto;
+        } 큰폴더 .wrap 만들어서 거기서 width, margin 설정해주기 */
+        .cont h2 {
+            font-size: 60px;
+            margin: 10px;
+            position: relative;
+        }
+        .cont h2::before {
+            content: '';
+            height: 20px;
+            width: 280px;
+            display: block;
+            background-color: plum;
+            position: absolute;
+            bottom: 10%;
+            left: 9%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        .cont ul {
+            margin-top: 50px;
+        }
+        .cont ul li {
+            font-size: 20px;
+            margin-bottom: 20px;
+            margin-left: 100px;
+        }
+        .cont .fas {
+            font-size: 30px;
+            background-color: #ddd;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 80px;
+           margin-right: 20px;
+        }
+        /* .fa-user {
+            font-size: 40px;
+            width: 50px;
+        }
+        .fa-map-marker-alt {
+            font-size: 40px;
+            width: 50px;
+        }
+        .fa-phone-alt {
+            font-size: 32px;
+            width: 50px;
+        } */
